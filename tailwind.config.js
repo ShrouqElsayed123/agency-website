@@ -7,7 +7,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}", // لو مشروعك فيه مجلد src
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xsm: "500px",
+        sm: "600px",
+        md: "690px",
+        lg: "988px",
+        xl: "1078px",
+        xxl: "1265px",
+      },
+    },
   },
   plugins: [],
 };
