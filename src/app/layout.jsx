@@ -13,22 +13,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {/* الحاوية الرئيسية */}
-        <div className="max-w-screen-md  overflow-hidden  lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl mx-auto flex flex-col min-h-screen justify-between ">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        {/* الـ Navbar */}
+        <Navbar />
 
+        {/* المحتوى الرئيسي */}
+        <main className="flex-grow flex items-center justify-center">
+          <div className="w-full max-w-screen-xl mx-auto px-4">{children}</div>
+        </main>
 
-          {/* الـ Navbar */}
-          <Navbar />
-
-          {/* المحتوى الرئيسي */}
-
-          <main className='flex-1'> {children}</main>
-
-
-          {/* الـ Footer */}
-          <Footer />
-        </div>
+        {/* الـ Footer */}
+        <Footer />
       </body>
     </html>
   )

@@ -16,6 +16,11 @@ module.exports = {
         xl: "1078px",
         xxl: "1265px",
       },
+      colors:{
+        mainColor:"#53C28B",
+        mainColorDark:"#56A679",
+        textColor:'#595959'
+      }
     },
   },
   plugins: [],
