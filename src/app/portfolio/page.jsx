@@ -7,19 +7,19 @@ const Portfolio = () => {
     {
       title: "Illustrations",
       img: "/illustration.png",
-      href: "/",
+      href: "/portfolio/illustration",
       active: false,
     },
     {
       title: "Websites",
       img: "/websites.jpg",
-      href: "/",
+      href: "/portfolio/websites",
       active: false,
     },
     {
       title: "Applications",
       img: "/apps.jpg",
-      href: "/",
+      href: "/portfolio/apps",
       active: false,
     },
   ];
@@ -54,10 +54,10 @@ const Portfolio = () => {
               </div>
 
               {/* Overlay Text */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black/60 py-3 text-lg font-semibold text-center">
+              <div className="absolute  bottom-0 left-0 right-0 bg-black/60 py-3 text-lg font-semibold text-center">
                 <span
                   className={`${item.active ? "text-green-400" : "text-gray-200"
-                    }`}
+                    } ` }
                 >
                   {item.title}
                 </span>
