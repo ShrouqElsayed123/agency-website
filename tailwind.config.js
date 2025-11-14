@@ -19,7 +19,7 @@ module.exports = {
       colors:{
         mainColor:"#53C28B",
         mainColorDark:"#56A679",
-        textColor:'#595959'
+        textColor:'#373636'
       }
     },
   },

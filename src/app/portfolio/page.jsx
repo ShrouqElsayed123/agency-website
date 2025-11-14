@@ -7,7 +7,7 @@ const Portfolio = () => {
     {
       title: "Illustrations",
       img: "/illustration.png",
-      href: "/portfolio/illustration",
+      href: "/portfolio/illustrations",
       active: false,
     },
     {
@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       title: "Applications",
       img: "/apps.jpg",
-      href: "/portfolio/apps",
+      href: "/portfolio/applications",
       active: false,
     },
   ];
@@ -47,8 +47,8 @@ const Portfolio = () => {
                   alt={item.title}
                   fill
                   className={`object-cover transition-all duration-500 ${item.active
-                      ? "brightness-100"
-                      : "brightness-75 grayscale group-hover:brightness-100 group-hover:grayscale-0"
+                    ? "brightness-100"
+                    : "brightness-75 grayscale group-hover:brightness-100 group-hover:grayscale-0"
                     }`}
                 />
               </div>
@@ -57,7 +57,7 @@ const Portfolio = () => {
               <div className="absolute  bottom-0 left-0 right-0 bg-black/60 py-3 text-lg font-semibold text-center">
                 <span
                   className={`${item.active ? "text-green-400" : "text-gray-200"
-                    } ` }
+                    } `}
                 >
                   {item.title}
                 </span>

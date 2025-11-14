@@ -44,7 +44,7 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
-        <li><Toggle /></li>
+        {/* <li><Toggle /></li> */}
       </ul>
 
       {/* Mobile Menu Button */}
