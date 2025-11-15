@@ -36,7 +36,6 @@ export default function AddPost() {
 
         alert("Post Added Successfully!");
 
-        // امسحي البيانات بعد الإضافة
         setFormData({
             title: "",
             desc: "",
@@ -52,74 +51,80 @@ export default function AddPost() {
         <div className="p-6">
             {/* Add Button */}
             <button
-                onClick={() => setShowForm(!showForm)}
+                onClick={() => setShowForm(true)}
                 className="bg-mainColor text-white px-4 py-2 rounded-md"
             >
-                {showForm ? "Close" : "Add Post"}
+                Add Post
             </button>
 
-            {/* FORM */}
+            {/* Modal */}
             {showForm && (
-                <form
-                    onSubmit={createPost}
-                    className="mt-4 grid grid-cols-1 gap-4 bg-gray-100 p-4 rounded-lg"
-                >
-                    <input
-                        type="text"
-                        name="title"
-                        value={formData.title}
-                        onChange={handleChange}
-                        placeholder="Title"
-                        className="p-2 border rounded"
-                        required
-                    />
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white p-6 rounded-lg w-full max-w-md relative">
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setShowForm(false)}
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+                        >
+                            ✕
+                        </button>
 
-                    <input
-                        type="text"
-                        name="desc"
-                        value={formData.desc}
-                        onChange={handleChange}
-                        placeholder="Description"
-                        className="p-2 border rounded"
-                        required
-                    />
+                        <h2 className="text-xl font-bold mb-4">Add New Post</h2>
 
-                    <input
-                        type="text"
-                        name="img"
-                        value={formData.img}
-                        onChange={handleChange}
-                        placeholder="Image URL"
-                        className="p-2 border rounded"
-                        required
-                    />
-
-                    <textarea
-                        name="content"
-                        value={formData.content}
-                        onChange={handleChange}
-                        placeholder="Content"
-                        className="p-2 border rounded"
-                        required
-                    />
-
-                    <input
-                        type="text"
-                        name="username"
-                        value={formData.username}
-                        onChange={handleChange}
-                        placeholder="Username"
-                        className="p-2 border rounded"
-                        required
-                    />
-
-                    <button
-                        type="submit"
-                        className="bg-mainColor text-white px-4 py-2 rounded-md"
-                    >
-                        Submit
-                    </button>
-                </form>
+                        <form onSubmit={createPost} className="grid grid-cols-1 gap-4">
+                            <input
+                                type="text"
+                                name="title"
+                                value={formData.title}
+                                onChange={handleChange}
+                                placeholder="Title"
+                                className="p-2 border rounded"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="desc"
+                                value={formData.desc}
+                                onChange={handleChange}
+                                placeholder="Description"
+                                className="p-2 border rounded"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="img"
+                                value={formData.img}
+                                onChange={handleChange}
+                                placeholder="Image URL"
+                                className="p-2 border rounded"
+                                required
+                            />
+                            <textarea
+                                name="content"
+                                value={formData.content}
+                                onChange={handleChange}
+                                placeholder="Content"
+                                className="p-2 border rounded"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="username"
+                                value={formData.username}
+                                onChange={handleChange}
+                                placeholder="Username"
+                                className="p-2 border rounded"
+                                required
+                            />
+                            <button
+                                type="submit"
+                                className="bg-mainColor text-white px-4 py-2 rounded-md"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
             )}
         </div>
     );

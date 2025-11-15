@@ -16,6 +16,8 @@ const Category = async ({ params }) => {
 
 
     const { category } = await params;
+
+
     const data = getData(category)
     return (
         <section className='px-100 flex items-left flex-col gap-10 max-w-screen-lg py-10'>
